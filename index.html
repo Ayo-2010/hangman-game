@@ -16,7 +16,10 @@
       <h1>Hangman</h1>
       <p class="hint" id="hint">Category</p>
     </div>
-    <div class="lives"><span id="lives">6</span><small>lives</small></div>
+    <div class="head-right">
+      <div class="lives"><span id="lives">6</span><small>lives</small></div>
+      <button class="help-btn" id="helpBtn" type="button">How to play</button>
+    </div>
   </header>
 
   <svg class="gallows" viewBox="0 0 220 240" aria-hidden="true">
@@ -39,6 +42,23 @@
 
   <button class="new" id="newBtn" type="button">New word</button>
 </main>
+
+<div class="help-modal" id="helpModal" hidden>
+  <div class="help-backdrop" data-close></div>
+  <div class="help-dialog" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+    <button class="help-close" id="helpClose" type="button" aria-label="Close">×</button>
+    <h2 class="help-title" id="helpTitle">How to play</h2>
+    <p class="help-lede">Guess a hidden word one letter at a time before the drawing is complete.</p>
+    <ol class="help-steps">
+      <li>A category hint is shown above the gallows.</li>
+      <li>Click a letter on the keyboard, or type on your keyboard.</li>
+      <li>Correct letters appear in the word.</li>
+      <li>Wrong letters cost one life and add a part to the drawing.</li>
+      <li>You have six lives. Lose them all and the round is over.</li>
+      <li>Guess every letter to win. New word starts a fresh round.</li>
+    </ol>
+  </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>

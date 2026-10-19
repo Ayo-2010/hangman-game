@@ -9,6 +9,7 @@ A word guessing game with 40 words, on-screen keys and a chalk drawn gallows.
 - On-screen keyboard plus physical keyboard support
 - Win and loss states that reveal the answer
 - New word button to start again
+- A How to play popup explains the rules
 
 ## Running it
 

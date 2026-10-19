@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hangman</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="game">
+  <header>
+    <div>
+      <h1>Hangman</h1>
+      <p class="hint" id="hint">Category</p>
+    </div>
+    <div class="lives"><span id="lives">6</span><small>lives</small></div>
+  </header>
+
+  <svg class="gallows" viewBox="0 0 220 240" aria-hidden="true">
+    <line x1="18" y1="226" x2="152" y2="226" />
+    <line x1="54" y1="226" x2="54" y2="18" />
+    <line x1="54" y1="18" x2="150" y2="18" />
+    <line x1="150" y1="18" x2="150" y2="46" />
+    <circle class="part" id="p-head" cx="150" cy="66" r="20" />
+    <line class="part" id="p-body" x1="150" y1="86" x2="150" y2="145" />
+    <line class="part" id="p-arm-l" x1="150" y1="102" x2="121" y2="126" />
+    <line class="part" id="p-arm-r" x1="150" y1="102" x2="179" y2="126" />
+    <line class="part" id="p-leg-l" x1="150" y1="145" x2="124" y2="184" />
+    <line class="part" id="p-leg-r" x1="150" y1="145" x2="176" y2="184" />
+  </svg>
+
+  <div class="word" id="word"></div>
+  <p class="message" id="message" hidden></p>
+
+  <div class="keys" id="keys"></div>
+
+  <button class="new" id="newBtn" type="button">New word</button>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
